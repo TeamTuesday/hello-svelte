@@ -5,6 +5,7 @@
   import Module, { capitalize } from "./components/Module.svelte";
   import IfElse from "./components/IfElse.svelte";
   import Each from "./components/Each.svelte";
+  import Slot from "./components/Slot.svelte";
 
   let name = "name";
   const onNameChange = (e) => {
@@ -40,4 +41,11 @@ name: {capitalize(name)}
 
 <!-- Each -->
 <Each />
+<hr />
+
+<!-- Slot -->
+<Slot>
+  <h2>Overrides</h2>
+  <button>button</button>
+</Slot>
 <hr />
