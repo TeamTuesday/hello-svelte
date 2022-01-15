@@ -3,6 +3,7 @@
   import Counter from "./components/Counter.svelte";
   import InputForm from "./components/InputForm.svelte";
   import Module, { capitalize } from "./components/Module.svelte";
+  import IfElse from "./components/IfElse.svelte";
 
   let name = "name";
   const onNameChange = (e) => {
@@ -30,4 +31,8 @@ name: {name}
 <!-- Module -->
 <Module />
 name: {capitalize(name)}
+<hr />
+
+<!-- If, Else -->
+<IfElse />
 <hr />
