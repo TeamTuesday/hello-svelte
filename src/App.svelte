@@ -6,11 +6,14 @@
   import IfElse from "./components/IfElse.svelte";
   import Each from "./components/Each.svelte";
   import Slot from "./components/Slot.svelte";
+  import Lifecycles from "./components/Lifecycles.svelte";
 
   let name = "name";
   const onNameChange = (e) => {
     name = e.detail;
   };
+
+  let open = false;
 </script>
 
 <h1>Hello Svelte</h1>
@@ -48,4 +51,11 @@ name: {capitalize(name)}
   <h2>Overrides</h2>
   <button>button</button>
 </Slot>
+<hr />
+
+<!-- Lifecycles -->
+Lifecycles: <button on:click={() => (open = !open)}>toggle</button>
+{#if open}
+  <Lifecycles />
+{/if}
 <hr />
