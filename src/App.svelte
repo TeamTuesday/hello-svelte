@@ -2,6 +2,7 @@
   import MyComponent from "./components/MyComponent.svelte";
   import Counter from "./components/Counter.svelte";
   import InputForm from "./components/InputForm.svelte";
+  import Module, { capitalize } from "./components/Module.svelte";
 
   let name = "name";
   const onNameChange = (e) => {
@@ -24,4 +25,9 @@
 name: {name}
 <InputForm {name} on:change={onNameChange} />
 <!-- <InputForm name={name} on:change={onNameChange} /> -->
+<hr />
+
+<!-- Module -->
+<Module />
+name: {capitalize(name)}
 <hr />
