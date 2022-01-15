@@ -4,6 +4,7 @@
   import InputForm from "./components/InputForm.svelte";
   import Module, { capitalize } from "./components/Module.svelte";
   import IfElse from "./components/IfElse.svelte";
+  import Each from "./components/Each.svelte";
 
   let name = "name";
   const onNameChange = (e) => {
@@ -35,4 +36,8 @@ name: {capitalize(name)}
 
 <!-- If, Else -->
 <IfElse />
+<hr />
+
+<!-- Each -->
+<Each />
 <hr />
